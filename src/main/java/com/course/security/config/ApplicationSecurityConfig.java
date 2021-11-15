@@ -1,4 +1,4 @@
-package com.course.security;
+package com.course.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-import static com.course.security.ApplicationUserRole.*;
+import static com.course.security.config.ApplicationUserRole.*;
 
 @Configuration
 @EnableWebSecurity
@@ -30,7 +30,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable() // TODO: I will learn this in detail, in the next session.
+//                .csrf().disable() // TODO: I will learn this in detail, in the next session.
                 .authorizeRequests()
                 .antMatchers("/","index", "/css/*", "/js/*").permitAll()
                 .antMatchers("/api/**").hasRole(STUDENT.name())

@@ -1,4 +1,4 @@
-package com.course.security;
+package com.course.security.config;
 
 public enum ApplicationUserPermission {
     STUDENT_READ("student:read"),

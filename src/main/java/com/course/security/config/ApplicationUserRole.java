@@ -1,4 +1,4 @@
-package com.course.security;
+package com.course.security.config;
 
 import com.google.common.collect.Sets;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -6,12 +6,10 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.course.security.ApplicationUserPermission.*;
-
 public enum ApplicationUserRole {
-    STUDENT(Sets.newHashSet(STUDENT_READ, STUDENT_WRITE)),
-    ADMIN(Sets.newHashSet(COURSE_READ, COURSE_WRITE, STUDENT_READ, STUDENT_WRITE)),
-    ADMINTRAINEE(Sets.newHashSet(COURSE_READ, STUDENT_READ));
+    STUDENT(Sets.newHashSet(ApplicationUserPermission.STUDENT_READ, ApplicationUserPermission.STUDENT_WRITE)),
+    ADMIN(Sets.newHashSet(ApplicationUserPermission.COURSE_READ, ApplicationUserPermission.COURSE_WRITE, ApplicationUserPermission.STUDENT_READ, ApplicationUserPermission.STUDENT_WRITE)),
+    ADMINTRAINEE(Sets.newHashSet(ApplicationUserPermission.COURSE_READ, ApplicationUserPermission.STUDENT_READ));
 
     private final Set<ApplicationUserPermission> permission;
 
