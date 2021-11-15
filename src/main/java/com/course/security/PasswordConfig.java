@@ -1,4 +1,4 @@
-package com.course.security.security;
+package com.course.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

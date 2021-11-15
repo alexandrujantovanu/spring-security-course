@@ -1,4 +1,4 @@
-package com.course.security.student;
+package com.course.student;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

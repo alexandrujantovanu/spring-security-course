@@ -1,4 +1,4 @@
-package com.course.security.security;
+package com.course.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-import static com.course.security.security.ApplicationUserRole.*;
+import static com.course.security.ApplicationUserRole.*;
 
 @Configuration
 @EnableWebSecurity
